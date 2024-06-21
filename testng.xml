@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="Restful booker API Test Suite">
     <test verbose="2" preserve-order="true"
           name="RestAssuredProject">
         <classes>
-            <class name="com.thetestingacademy.testng.Lab261">
+            <class name="com.thetestingacademy.testng.Lab262"> </class>
 
-            </class>
+            <class name="com.thetestingacademy.testng.Lab261"> </class>
+
+
+
+
         </classes>
     </test>
 </suite>
