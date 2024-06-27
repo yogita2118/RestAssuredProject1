@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RestAssuredProject"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="1.892">
+    <properties></properties>
+
+
+
+            <testcase
+                name="testPutREQUESTNonBDD"
+                time="1.892"
+                classname="com.thetestingacademy.ex_22062024.CRUD.PUT.Lab273">
+            </testcase>
+</testsuite>
