@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RestAssuredProject"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.065">
+    <properties></properties>
+
+
+
+            <testcase
+                name="testMethodA"
+                time="0.062"
+                classname="com.thetestingacademy.ex_25062024.Lab279">
+            </testcase>
+            <testcase
+                name="testMethodC"
+                time="0.002"
+                classname="com.thetestingacademy.ex_25062024.Lab279">
+            </testcase>
+            <testcase
+                name="testMethodB"
+                time="0.001"
+                classname="com.thetestingacademy.ex_25062024.Lab279">
+            </testcase>
+</testsuite>

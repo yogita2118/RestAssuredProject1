@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RestAssuredProject"
+           tests="5"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.079">
+    <properties></properties>
+
+
+
+            <testcase
+                name="RegRun"
+                time="0.003"
+                classname="com.thetestingacademy.ex_25062024.Lab280">
+            </testcase>
+            <testcase
+                name="QARun"
+                time="0.002"
+                classname="com.thetestingacademy.ex_25062024.Lab280">
+            </testcase>
+            <testcase
+                name="ProdRun"
+                time="0.003"
+                classname="com.thetestingacademy.ex_25062024.Lab280">
+            </testcase>
+            <testcase
+                name="sanityRun"
+                time="0.065"
+                classname="com.thetestingacademy.ex_25062024.Lab280">
+            </testcase>
+            <testcase
+                name="SmokeRun"
+                time="0.006"
+                classname="com.thetestingacademy.ex_25062024.Lab280">
+            </testcase>
+</testsuite>

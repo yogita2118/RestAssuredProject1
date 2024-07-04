@@ -1,5 +1,6 @@
 package com.thetestingacademy.ex_22062024.CRUD.POST;
 
+import com.github.javafaker.Faker;
 import io.qameta.allure.Description;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -22,8 +23,11 @@ public class Lab272 {
 
         String BASE_URL = "https://restful-booker.herokuapp.com";
         String BASE_PATH = "/booking";
+        Faker faker = new Faker();
+        String firstName = faker.name().firstName();
+
         String payload = "{\n" +
-                "    \"firstname\" : \"Jim\",\n" +
+                "    \"firstname\" : \""+firstName+"\",\n" +
                 "    \"lastname\" : \"Brown\",\n" +
                 "    \"totalprice\" : 111,\n" +
                 "    \"depositpaid\" : true,\n" +
@@ -34,19 +38,26 @@ public class Lab272 {
                 "    \"additionalneeds\" : \"Breakfast\"\n" +
                 "}";
 
-        RestAssured
-                .given().baseUri(BASE_URL).basePath(BASE_PATH)
-                .contentType(ContentType.JSON).log().all().body(payload)
 
-                .when().log().all().post()
+        r.baseUri(BASE_URL);
+        r.basePath(BASE_PATH);
+        r.contentType(ContentType.JSON).log().all();
+        r.body(payload);
 
-                .then().log().all().statusCode(200);
+        response = r.when().log().all().post();
+        String responseString = response.asString();
+        System.out.println(responseString);
+
+        validatableResponse =response.then();
+        validatableResponse.statusCode(200);
+
+
 
     }
 
 
 
-    @Description("TC#1 - Verify that create booking not working, with 500 Error")
+    @Description("TC#2 - Verify that create booking not working, with 500 Error")
         @Test
         public void testNonBDDStylePOSTNegative() {
 
@@ -55,18 +66,22 @@ public class Lab272 {
         String payload = "{}";
 
 
+        r.baseUri(BASE_URL);
+        r.basePath(BASE_PATH);
+        r.contentType(ContentType.JSON).log().all();
+        r.body(payload);
 
-                r.baseUri(BASE_URL);
-                r.basePath(BASE_PATH);
-                r.contentType(ContentType.JSON).log().all();
-                r.body(payload);
+        response = r.when().log().all().post();
+        String responseString = response.asString();
+        System.out.println(responseString);
 
-                response = r.when().log().all().post();
-                String responseString = response.asString();
-                System.out.println(responseString);
 
-                validatableResponse =response.then();
-                validatableResponse.statusCode(500);
+        validatableResponse = response.then();
+        validatableResponse.statusCode(500);
+
+
+
+
     }
 
     }
